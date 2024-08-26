@@ -1,0 +1,125 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Home.css';
+
+
+const Home = () => {
+    return (
+        <div>
+            <header className="home-header">
+                <img src={require('../assets/logoshop.png')} alt="Viet Master Shop Logo" className="h-12" style={{ width: '100px', height: '85px' }} />
+                <nav className='about-nav'>
+                    <Link to="/" className="nav-link mr-4">Home</Link>
+                    <Link to="/about" className="nav-link mr-4">About</Link>
+                    <Link to="/contact" className="nav-link mr-4">Contact</Link>
+                </nav>
+            </header>
+
+
+            <section className="bg-banner text-primary-foreground py-16 px-6 text-center">
+    <h1 className="text-4xl font-bold mb-4">Welcome to Viet Master Shop</h1>
+    <p className="text-lg mb-8">Your one-stop shop for all things sports!</p>
+    <button onClick={() => { /* Handle action here */ }} className="bg-secondary text-secondary-foreground py-2 px-6 rounded-lg hover:bg-secondary/80 transition-colors">
+        Explore Now
+    </button>
+</section>
+
+
+            <section className="bg-background text-primary-foreground py-12 px-6">
+                <div className="text-featured-products-container">
+                    <h2 className="text-2xl font-bold mb-8 text-featured-products">
+                        <span>F</span>
+                        <span>e</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>u</span>
+                        <span>r</span>
+                        <span>e</span>
+                        <span>d</span>
+                        <span> </span>
+                        <span>P</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>d</span>
+                        <span>u</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>s</span>
+                    </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Product 1 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240410_lLKBIu1l12.jpeg" alt="Football" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Nike</h3>
+                        <p className="text-sm mb-4">Superfly 9 Academy TF - Màu Trà Sữa - DJ5629-700</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 2 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240410_YoHqeZsfFQ.jpeg" alt="Basketball" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Nike</h3>
+                        <p className="text-sm mb-4">Superfly 9 Academy MDS008 TF - Xanh Lá - FJ7199-300</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 3 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240809_lsCW7rKiN2.jpeg" alt="Tennis Racket" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Nike</h3>
+                        <p className="text-sm mb-4">Vapor 15 Pro TF Mad Brilliance - Màu Hồng Đen - DJ5605-601</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 4 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240409_uMJ0jioDjg.jpeg" alt="Baseball Bat" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Mizuno</h3>
+                        <p className="text-sm mb-4">Morelia Neo IV Pro AS - Vàng Xanh/Đỏ - P1GD243445</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 5 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240619_lPZdDOgy85.jpeg" alt="Volleyball" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Mizuno</h3>
+                        <p className="text-sm mb-4">Alpha Pro AS - P1GD246450 - Trắng/Vàng</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 6 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20220901_EfLl0IOT7DyzjUFVhtGqo2RW.jpg" alt="Golf Club" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Mizuno</h3>
+                        <p className="text-sm mb-4">Morelia Neo III Lạc Việt Limited Edition - P1GD228444</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 7 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240619_x4w26QxnUX.jpeg" alt="Hockey Stick" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Adidas</h3>
+                        <p className="text-sm mb-4">F50 Messi League TF Vàng/Trắng - IG9282</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 8 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240410_pCKpUFlLpm.jpeg" alt="Badminton Racket" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Adidas</h3>
+                        <p className="text-sm mb-4">X Crazyfast Elite TF - Đỏ/Cam Trắng - IF0663</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                    {/* Product 9 */}
+                    <div className="bg-card text-card-foreground p-4 rounded-lg shadow-md">
+                        <img src="https://pos.nvncdn.com/b0b717-26181/ps/20240809_dcZUpUoj6N.jpeg" alt="Soccer Cleats" className="w-full h-48 object-cover rounded-lg mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Adidas</h3>
+                        <p className="text-sm mb-4">X Crazyfast .1 TF Marine Rush - Xanh Dương/Trắng - IE6633</p>
+                        <button className="bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/80 transition-colors">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <footer className="about-footer">
+                <p>Liên hệ: vietmastershop@example.com | Điện thoại: 0377 797 231</p>
+                <p>&copy; 2018 Viet Master Shop. All Rights Reserved.</p>
+            </footer>
+        </div>
+    );
+};
+
+export default Home;

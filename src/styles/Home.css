@@ -140,6 +140,54 @@ a:hover {
     }
 }
 
+.bg-banner {
+    background-image: url('../assets/banner3.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Ensure text is readable */
+}
+.bg-banner h1, .bg-banner p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Creates a subtle shadow effect */
+    position: relative;
+    z-index: 1; /* Ensures the text stays on top */
+}
+
+.bg-banner h1 {
+    font-size: 2.5rem; /* Adjust the font size */
+    font-weight: bold;
+}
+
+.bg-banner p {
+    font-size: 1.25rem; /* Adjust the font size */
+    margin-bottom: 2rem;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+}
+
 
 /* Other Styles */
 .text-featured-products-container {
@@ -181,4 +229,55 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+}
+
+/* Home.css */
+
+/* Style for the modal navigation buttons */
+/* Home.css */
+
+/* Style for the previous and next buttons */
+
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.modal-image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.image-navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.image-navigation button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
